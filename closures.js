@@ -200,17 +200,14 @@ function secretNumber() {
 */
 
 function timeOutCounter() {
-  return function() {
-    let logger = []
-    let j = 0
-    for (var i = 0; i <= 5; i++) {
-      logger.push(i);
-      setTimeout(function() {       
-        console.log(logger[j])
-        j++
-      }, i * 1000);
-    }    
-  };
+  let logger = [];
+  let j = 0;
+  for (var i = 0; i <= 5; i++) {
+    logger.push(i);
+    setTimeout(function() {
+      console.log(logger[j]);
+      j++;
+    }, i * 1000);
+  }
 }
-let log = timeOutCounter();
-log()
+timeOutCounter();
